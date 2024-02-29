@@ -1,3 +1,6 @@
+import 'package:bookmarks_wallet/features/authentication/presentation/screens/login_screen.dart';
+import 'package:bookmarks_wallet/features/authentication/presentation/screens/register_screen.dart';
+import 'package:bookmarks_wallet/features/home/presentation/screens/add_categories_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../features/splash/splash_screen.dart';
@@ -7,22 +10,8 @@ class Routes {
   static const String loginRoute = '/loginRoute';
   static const String registerRoute = '/registerRoute';
   static const String homeRoute = '/HomeRoute';
+  static const String addCategoryRoute = '/addCategoryRoute';
 
-  //Parent
-  static const String addChildScreen = '/addChildScreen';
-  static const String childHomeworkDetailsScreen = '/childHomeworkDetailsScreen';
-
-
-  //Teacher
-  static const String teacherAddHomeWorkScreen = '/teacherAddHomeWorkScreen';
-  static const String teacherHomeworkDetailsScreen =
-      '/teacherHomeworkDetailsScreen';
-  static const String studentHomeworkDetailsScreen =
-      '/studentHomeworkDetailsScreen';
-  static const String studentRatingScreen =
-      '/studentRatingScreen';
-  static const String behaviorDetailsScreen =
-      '/behaviorDetailsScreen';
 }
 
 class RouteGenerator {
@@ -30,6 +19,12 @@ class RouteGenerator {
     switch (settings.name) {
       case Routes.splashRoute:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
+      case Routes.loginRoute:
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
+      case Routes.registerRoute:
+        return MaterialPageRoute(builder: (_) => const RegisterScreen());
+      case Routes.addCategoryRoute:
+        return MaterialPageRoute(builder: (_) => const AddCategoriesScreen());
 
       // case Routes.studentHomeworkDetailsScreen:
       //   return MaterialPageRoute(builder: (_) {

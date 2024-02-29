@@ -56,12 +56,15 @@ class _SplashScreenState extends State<SplashScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: myWidth*0.1),
                     child: SizedBox(
-                        height: myHeight*0.2,
+                        height: myHeight*0.35,
                         width: myWidth,
                         child: SvgPicture.asset(ImageAssetsManager.mainLogo)),
                   ),
                   SizedBox(height: myHeight*0.15,),
-                  Text(AppStrings.welcome,style: Theme.of(context).textTheme.headlineLarge,),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: myWidth*0.05),
+                    child: Text(AppStrings.welcome,style: Theme.of(context).textTheme.headlineLarge,),
+                  ),
                   SizedBox(height: myHeight*0.1,),
                   LoadingAnimationWidget.staggeredDotsWave(color: ColorManager.ministryColor.withOpacity(0.8), size: SizeManager.bigSize),
                 ],
